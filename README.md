@@ -2,6 +2,10 @@
 
 I didn't like the look of the existing perl and php examples so I had a shot at writing my own.
 
+## Notes
+
+The styling is non-existant at the moment, but pull requests welcome!
+
 ## Requirements
 
 * Murmur with a working DBUS setup (look at the murmur docs on how to get this working)
