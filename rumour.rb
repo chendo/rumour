@@ -34,17 +34,17 @@ get '/' do
       var template = "{{#servers}}                                   \\
           <div class=\\"server\\">                                     \\
             <strong>{{root_channel.name}}</strong>                   \\
+            <ul class=\\"users\\">                                   \\
+              {{#root_channel.users}}                              \\
+                <li>{{name}} {{#talking}}talking{{/talking}} </li> \\
+              {{/root_channel.users}}                              \\
+            </ul>                                                  \\
             <ul>                                                     \\
               {{#root_channel.children}}                             \\
                 {{>channel}}                                         \\
               {{/root_channel.children}}                             \\
-              <ul class=\\"users\\">                                   \\
-                {{#root_channel.users}}                              \\
-                  <li>{{name}} {{#talking}}talking{{/talking}} </li> \\
-                {{/root_channel.users}}                              \\
-              </ul>                                                  \\
-            </ul>                                                    \\
-          </div>                                                     \\
+            </ul>                                                   \\
+          </div>                                                    \\
         {{/servers}}";
 
       $(function () {
